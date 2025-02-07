@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<h2>Gavilan Course Reserves</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for course names.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:30%;">Course</th>
+    <th style="width:50%;">Title</th>
+    <th style="width:20%;">Edition</th>
+  </tr>
+    <tr>
+      <td>ACCT 20/21 - STAFF</td>
+      <td>Managerial ACCT /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ACCT 20/21 - STAFF</td>
+      <td>Financial accounting for undergraduates /</td>
+      <td>Fourth edition</td>
+    </tr>
+    <tr>
+      <td>AH 11 - STAFF</td>
+      <td>Nutrition : concepts &amp; controversies /</td>
+      <td>15th edition.</td>
+    </tr>
+    <tr>
+      <td>AH 280 - REID</td>
+      <td>CNA Nursing Assistant Certification</td>
+      <td>California Edition</td>
+    </tr>
+    <tr>
+      <td>AH 280 - REID</td>
+      <td>The Best Friends Approach to Dementia Care</td>
+      <td>Second</td>
+    </tr>
+    <tr>
+      <td>AH 280 - REID</td>
+      <td>Mosby's Dictionary of Medicine, Nursing and Health Professions</td>
+      <td>Tenth Edition</td>
+    </tr>
+    <tr>
+      <td>AH 280 - REID</td>
+      <td>CNA Nursing Assistant Certification- Workbook</td>
+      <td>California Edidion Workbook</td>
+    </tr>
+    <tr>
+      <td>ANTH 1 - STAFF</td>
+      <td>Dancing Skeletons Life and Death in West Africa</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ANTH 1 - STAFF</td>
+      <td>Biological anthropology /</td>
+      <td>7th ed.</td>
+    </tr>
+    <tr>
+      <td>ANTH 1 - STAFF</td>
+      <td>Dancing skeletons : life and death in West Africa /</td>
+      <td>20th anniversary edition.</td>
+    </tr>
+    <tr>
+      <td>ANTH 1 - KLEIN</td>
+      <td>Biological anthropology /</td>
+      <td>7th ed.</td>
+    </tr>
+    <tr>
+      <td>ANTH 2 - KLEIN</td>
+      <td>Archaeology : Down to earth /</td>
+      <td>Fifth edition</td>
+    </tr>
+    <tr>
+      <td>ANTH 3 -  SALINAS</td>
+      <td>The spirit catches you and you fall down : a Hmong child, her American doctors, and the collision of two cultures /</td>
+      <td>Paperback edition.</td>
+    </tr>
+    <tr>
+      <td>ANTH 3 -  SALINAS</td>
+      <td>In search of respect : selling crack in El Barrio /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ANTH 3 -  SALINAS</td>
+      <td>Cultural anthropology : global forces, local lives /</td>
+      <td>Second edition.</td>
+    </tr>
+    <tr>
+      <td>ANTH 5 - KLEIN</td>
+      <td>In sorcery's shadow : a memoir of apprenticeship among the Songhay of Niger</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ANTH 5 - KLEIN</td>
+      <td>The anthropology of religion, magic, and witchcraft /</td>
+      <td>3rd ed.</td>
+    </tr>
+    <tr>
+      <td>ANTH 5 - KLEIN</td>
+      <td>Mama Lola : a vodou priestess in Brooklyn /</td>
+      <td>Updated and expanded 2nd ed.</td>
+    </tr>
+    <tr>
+      <td>APA - MTRLS</td>
+      <td>Publication manual of the American Psychological Association /</td>
+      <td>Sixth edition.</td>
+    </tr>
+    <tr>
+      <td>ART 1A - STAFF</td>
+      <td>Gardner's art through the ages : a global history /</td>
+      <td>Sixteenth edition.</td>
+    </tr>
+    <tr>
+      <td>ART 1B - STAFF</td>
+      <td>Gardner's art through the ages : the western perspective /</td>
+      <td>Fifteenth edition.</td>
+    </tr>
+    <tr>
+      <td>ART 1B - STAFF</td>
+      <td>Gardner's art through the ages : the western perspective /</td>
+      <td>Fifteenth edition.</td>
+    </tr>
+    <tr>
+      <td>ASTR 1 - STAFF</td>
+      <td>The cosmic perspective /</td>
+      <td>Ninth edition.</td>
+    </tr>
+    <tr>
+      <td>ASTR 1 - STAFF</td>
+      <td>Lecture-tutorials for introductory astronomy /</td>
+      <td>Third edition.</td>
+    </tr>
+    <tr>
+      <td>ASTR 1 - SALANDER</td>
+      <td>Explorations ; an introduction to astronomy</td>
+      <td>8th ed.</td>
+    </tr>
+    <tr>
+      <td>BIO 12 - DORSA</td>
+      <td>Human biology : concepts and current issues /</td>
+      <td>Eighth edition.</td>
+    </tr>
+    <tr>
+      <td>BIO 15 - BUNDROS</td>
+      <td>Hole's essentials of human anatomy &amp; physiology /</td>
+      <td>Fourteenth edition.</td>
+    </tr>
+    <tr>
+      <td>BIO 8 - STAFF</td>
+      <td>Microbiology : an introduction /</td>
+      <td>10th edition.</td>
+    </tr>
+    <tr>
+      <td>CD 13 - BOSSE</td>
+      <td>Infants, toddlers, and caregivers : a curriculum of respectful, responsive, relationship-based care and education /</td>
+      <td>Twelfth edition.</td>
+    </tr>
+    <tr>
+      <td>CD 13 - BOSSE</td>
+      <td>Exceptional learners : an introduction to special education /</td>
+      <td>Fourteenth edition.</td>
+    </tr>
+    <tr>
+      <td>CD 14A - HENRICKSON</td>
+      <td>Working with School Age Children</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>CD 14B - HOSHIKO</td>
+      <td>Classroom discipline and management / Clifford H. Edwards.</td>
+      <td>5th ed.</td>
+    </tr>
+    <tr>
+      <td>CD 14B - HOSHIKO</td>
+      <td>Classroom discipline and management / Clifford H. Edwards.</td>
+      <td>5th ed.</td>
+    </tr>
+    <tr>
+      <td>CD 2 - HENRICKSON</td>
+      <td>The developing person through childhood and adolescence /</td>
+      <td>Twelfth edition.</td>
+    </tr>
+    <tr>
+      <td>CD 2 - HENRICKSON</td>
+      <td>The developing person through childhood and adolescence /</td>
+      <td>Twelfth edition.</td>
+    </tr>
+    <tr>
+      <td>CD 2 - HENRICKSON</td>
+      <td>The developing person through childhood and adolescence /</td>
+      <td>Thirteenth edition.</td>
+    </tr>
+    <tr>
+      <td>CD 32 - HENRICKSON</td>
+      <td></td>
+      <td>1st ed.</td>
+    </tr>
+    <tr>
+      <td>CD 32 - HENRICKSON</td>
+      <td>Designs for living and learning : transforming early childhood environments /</td>
+      <td>Second edition.</td>
+    </tr>
+    <tr>
+      <td>CD 32 - BOSSE</td>
+      <td>Developmentally appropriate practice in early childhood programs serving children from birth through age 8 /</td>
+      <td>Fourth edition.</td>
+    </tr>
+    <tr>
+      <td>CD 32 - BOSSE</td>
+      <td>The right call : what sports teaches us about work and life /</td>
+      <td>First Gallery Books hardcover edition.</td>
+    </tr>
+    <tr>
+      <td>CD 5 - HENRICKSON</td>
+      <td>Child, Family, and Community</td>
+      <td>7th</td>
+    </tr>
+    <tr>
+      <td>CD 8B - HENRICKSON</td>
+      <td>Literacy in the 21st Century A Balance Approach</td>
+      <td>7th</td>
+    </tr>
+    <tr>
+      <td>CHEM 1B - STAFF</td>
+      <td>Chemistry : the molecular nature of matter /</td>
+      <td>6th ed.</td>
+    </tr>
+    <tr>
+      <td>CHEM 30A - STAFF</td>
+      <td>An introduction to chemistry /</td>
+      <td>[1st ed.].</td>
+    </tr>
+    <tr>
+      <td>CHEM 30A - MOLLE</td>
+      <td>General, organic, and biological chemistry : structures of life /</td>
+      <td>Sixth edition.</td>
+    </tr>
+    <tr>
+      <td>CMUN 10 - STAFF</td>
+      <td>Pocket guide to public speaking / Dan O'hair, Hannah Rubenstein, Rob Stewart.</td>
+      <td>5th ed.</td>
+    </tr>
+    <tr>
+      <td>CMUN 10 - ZAJAC</td>
+      <td>Creating effective groups : the art of small group communication / Randy Fujishin.</td>
+      <td>2nd ed.</td>
+    </tr>
+    <tr>
+      <td>CMUN 1A - STAFF</td>
+      <td>A pocket guide to public speaking /</td>
+      <td>Sixth edition.</td>
+    </tr>
+    <tr>
+      <td>CMUN 1A - STAFF</td>
+      <td>The art of public speaking /</td>
+      <td>Thirteenth edition.</td>
+    </tr>
+    <tr>
+      <td>CMUN 1A - ANDRADE</td>
+      <td>Speak up! : an illustrated guide to public speaking /</td>
+      <td>Fifth edition.</td>
+    </tr>
+    <tr>
+      <td>CMUN 3 - STAFF</td>
+      <td>Advocacy and opposition : an introduction to argumentation /</td>
+      <td>7th ed.</td>
+    </tr>
+    <tr>
+      <td>CMUN 4 - STAFF</td>
+      <td>Experiencing intercultural communication : an introduction /</td>
+      <td>Seventh edition.</td>
+    </tr>
+    <tr>
+      <td>CMUN 6 - STAFF</td>
+      <td>Peace skills : a manual for community mediators /</td>
+      <td>1st ed.</td>
+    </tr>
+    <tr>
+      <td>CMUN 8 - STAFF</td>
+      <td>The interpersonal communication book /</td>
+      <td>Sixteenth edition.</td>
+    </tr>
+    <tr>
+      <td>CMUN 8 - STAFF</td>
+      <td>The 5 love languages : the secret to love that lasts /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>CMUN 8 - STAFF</td>
+      <td>Looking out, looking in /</td>
+      <td>14th ed.</td>
+    </tr>
+    <tr>
+      <td>CSIS 1 - STAFF</td>
+      <td>Technology for success : computer concepts /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>CSIS/DM 74 - STAFF</td>
+      <td>Adobe Master Class Advanced Composting in Adobe Photoship CC</td>
+      <td>2nd Edition</td>
+    </tr>
+    <tr>
+      <td>CSIS/DIM 74 - STAFF</td>
+      <td>Adobe Master Class Advanced Composting in Adobe Photoship CC</td>
+      <td>2nd Edition</td>
+    </tr>
+    <tr>
+      <td>ECON 1 - STAFF</td>
+      <td>Macroeconomics /</td>
+      <td>Sixth edition.</td>
+    </tr>
+    <tr>
+      <td>ECON 1 - STAFF</td>
+      <td>Macroeconomics /</td>
+      <td>4th ed.</td>
+    </tr>
+    <tr>
+      <td>ECON 2 - STAFF</td>
+      <td>Microeconomics /</td>
+      <td>4th ed.</td>
+    </tr>
+    <tr>
+      <td>ECON 2 - STAFF</td>
+      <td>Microeconomics / R. Glenn Hubbard, Anthony Patrick O'brien.</td>
+      <td>7th ed.</td>
+    </tr>
+    <tr>
+      <td>ENGL</td>
+      <td>Writing logically, thinking critically / Sheila Cooper, Rosemary Patton.</td>
+      <td>8th ed.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - STAFF</td>
+      <td>Just mercy : a story of justice and redemption /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - SANDLER</td>
+      <td>A dream called home : a memoir /</td>
+      <td>First Washington Square Press/Atria Paperback edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - SANDLER</td>
+      <td>Dare to lead : brave work, tough conversations, whole hearts /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - SANDLER</td>
+      <td>Drive : the surprising truth about what motivates us /</td>
+      <td>First Riverhead trade paperback edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - SANDLER</td>
+      <td>The right call : what sports teaches us about work and life /</td>
+      <td>First Gallery Books hardcover edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - COLLINS</td>
+      <td>Regeneration : ending the climate crisis in one generation /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - COLLINS</td>
+      <td>The Buddha in the attic /</td>
+      <td>First Anchor books edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - COLLINS</td>
+      <td>Sustainability : a reader for writers / Carl G. Herndl.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - COLLINS</td>
+      <td>Hillbilly elegy : a memoir of a family and culture in crisis /</td>
+      <td>First edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - COLLINS</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - HERZI</td>
+      <td>So you want to talk about race /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - HERZI</td>
+      <td>How we fight for our lives : a memoir /</td>
+      <td>First Simon &amp; Schuster paperback edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - HIRASUNA</td>
+      <td>The man they wanted me to be : toxic masculinity and a crisis of our own making /</td>
+      <td>First hardcover edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - HIRASUNA</td>
+      <td>The Buddha in the attic /</td>
+      <td>First Anchor books edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - HOOPER</td>
+      <td>One life /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - HOOPER</td>
+      <td>My grandmother's hands : racialized trauma and the pathway to mending our hearts and bodies /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - HOOPER</td>
+      <td>Letters to a young athlete /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - HOOPER</td>
+      <td>I am Diosa : a journey to healing deep, loving yourself, and coming back home to soul /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - HOOPER</td>
+      <td>The shift : one nurse, twelve hours, four patients' lives /</td>
+      <td>First paperback edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - HOOPER</td>
+      <td>English 1A: Composition and Reading</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - HOOPER</td>
+      <td>English 1A: Composition and Reading</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - HOOPER</td>
+      <td>Food fix : how to save our health, our economy, our communities, and our planet -- one bite at a time /</td>
+      <td>First edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - HOOPER</td>
+      <td>Being mortal : medicine and what matters in the end /</td>
+      <td>First edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - HOOPER</td>
+      <td>Buddha's brain : the practical neuroscience of happiness, love &amp; wisdom /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - MORA</td>
+      <td>Critical thinking /</td>
+      <td>Eleventh edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - MORA</td>
+      <td>Grit : the power of passion and perseverance /</td>
+      <td>First Scribner hardcover edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - MORA</td>
+      <td>Fahrenheit 451 /</td>
+      <td>60th anniversary edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - ORAL</td>
+      <td>Fluke, or, I know why the winged whale sings /</td>
+      <td>1st Perennial ed.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - ORAL</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - PALSGROVE</td>
+      <td>Born a crime : stories from a South African childhood /</td>
+      <td>First edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - SMITH</td>
+      <td>Between the world and me /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - SMITH</td>
+      <td>"They say / I say", the moves that matter in academic writing / Gerald Graff, Cathy Birkenstein.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - SALVIN</td>
+      <td>A cup of water under my bed : a memoir /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - SALVIN</td>
+      <td>The yellow wallpaper.</td>
+      <td>[1st ed.]</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - DAVIS</td>
+      <td>The autobiography of Malcolm X /</td>
+      <td>First Ballantine books edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - DAVIS</td>
+      <td></td>
+      <td>1st Vintage Books ed.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - MCMILLEN</td>
+      <td>Dopamine nation : finding balance in the age of indulgence  /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1A - AVILA</td>
+      <td>Reality is broken : why games make us better and how they can change the world /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1B - PALSGROVE</td>
+      <td>Kindred /</td>
+      <td>25th anniverary ed.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1B - PALSGROVE</td>
+      <td>Spring awakening /</td>
+      <td>1st ed.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1B - PALSGROVE</td>
+      <td>Never let me go /</td>
+      <td>First Vintage International edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1B - WARREN</td>
+      <td>Plantation Boy a Novel</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1B - WARREN</td>
+      <td>Five years on a rock /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1B - WARREN</td>
+      <td>Pau Hana Plantation Life and Labor in Hawaii 1835-1920</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1B - WARREN</td>
+      <td>Early Works: Actos, Bernabe and Pensamiento Serpentino</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1B - WARREN</td>
+      <td>Two Novels of Hawaii Waimea Summer</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1B - WARREN</td>
+      <td>All I asking for is my body /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1B - WARREN</td>
+      <td>Angels in America : a gay fantasia on national themes /</td>
+      <td>First edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1B - WARREN</td>
+      <td>Spider Woman's granddaughters : traditional tales and contemporary writing by Native American women /</td>
+      <td>1st Ballantine Books ed.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1B - MORA</td>
+      <td>Rebecca.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1B - MORA</td>
+      <td>Dracula /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 2J - GATEWOOD</td>
+      <td>World mythology : an anthology of the great myths and epics /</td>
+      <td>3rd ed.</td>
+    </tr>
+    <tr>
+      <td>ENGL 2J - GATEWOOD</td>
+      <td>Parallel myths /</td>
+      <td>1st ed.</td>
+    </tr>
+    <tr>
+      <td>ENGL 2J - GATEWOOD</td>
+      <td>American gods /</td>
+      <td>Tenth anniversary edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 2J - GATEWOOD</td>
+      <td>The Odyssey /</td>
+      <td>First edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 2J - GATEWOOD</td>
+      <td>Norse mythology /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 4A - SANDLER</td>
+      <td>The Norton anthology of English literature.</td>
+      <td>Tenth edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 4A - SANDLER</td>
+      <td>The Norton anthology of English literature.</td>
+      <td>Tenth edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 9A/9B - COLLINS</td>
+      <td>The white album : [essays] /</td>
+      <td>Paperback edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 9A/9B - COLLINS</td>
+      <td>A book of luminous things : an international anthology of poetry / edited, and with an introduction by Czeslaw Milosz.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 9A/9B - COLLINS</td>
+      <td>The practice of creative writing : a guide for students / Heather Sellers.</td>
+      <td>3rd. ed.</td>
+    </tr>
+    <tr>
+      <td>ENGL 9A/9B - COLLINS</td>
+      <td>The things they carried : a work of fiction /</td>
+      <td>First Mariner books edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 9A/9B - SMITH</td>
+      <td>Best american short stories / Roxane Gay.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 9A/9B - SMITH</td>
+      <td>Imaginary animal / Rachelle Linda Escamilla.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 9A/9B - SMITH</td>
+      <td>They can't kill us until they kill us / Hanif Abdurraqib.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 9A/9B - SMITH</td>
+      <td>Trick mirror : reflections on self-delusion /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 9A/9B - SMITH</td>
+      <td>365 days/365 plays /</td>
+      <td>First edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 9A/9B - SMITH</td>
+      <td>The three Theban plays /</td>
+      <td>Reprinted, with revisions.</td>
+    </tr>
+    <tr>
+      <td>ENGL 9A/9B - SMITH</td>
+      <td>Postcolonial love poem /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 9A/9B - SMITH</td>
+      <td>Rose : poems /</td>
+      <td>1st ed.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - COLLINS</td>
+      <td>Writing logically, thinking critically /</td>
+      <td>Eighth Edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - COLLINS</td>
+      <td>Writing logically, thinking critically /</td>
+      <td>Eighth Edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - COLLINS</td>
+      <td>The Story of More</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - COLLINS</td>
+      <td>Drawdown The Most Comprehensive Plan Ever Propsed to Reverse Global Warming</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - COLLINS</td>
+      <td>A writer's reference /</td>
+      <td>Tenth edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - GATEWOOD</td>
+      <td>Nonsense : red herrings, straw men and sacred cows: how we abuse logic in our everyday language /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - GATEWOOD</td>
+      <td>Rising out of hatred : the awakening of a former white nationalist /</td>
+      <td>First edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - HIRASUNA</td>
+      <td>They say/I say" : the moves that matter in academic writing, with readings / Gerald Graff, Cathy Birkenstein, Russel Durst.</td>
+      <td>3rd ed.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - HIRASUNA</td>
+      <td>Nonsense : red herrings, straw men, and sacred cows : how we abuse logic in our everyday language / Robert J. Gula.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - HULL</td>
+      <td>The shallows : what the Internet is doing to our brains /</td>
+      <td>Norton paperback [edition].</td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - HULL</td>
+      <td>"They say/I say" : the moves that matter in academic writing : with readings / Gerald Graff, Cathy Birkenstein, Russell Durst.</td>
+      <td>1st ed.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - HULL</td>
+      <td>So what? : the writer's argument /</td>
+      <td>Third edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - ORAL</td>
+      <td>Everybody lies : big data, new data, and what the Internet reveals about who we really are /</td>
+      <td>First Dey Street Books paperback edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - STAFF</td>
+      <td>Being logical : a guide to good thinking /</td>
+      <td>Trade pbk. ed.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - STAFF</td>
+      <td>"They say/I say" : the moves that matter in academic writing : with readings /</td>
+      <td>2nd ed.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - SMITH</td>
+      <td>The children of Sánchez : autobiography of a Mexican family /</td>
+      <td>2nd Vintage books ed., 50th anniversary ed.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - SMITH</td>
+      <td>Research is ceremony : indigenous research methods /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - SMITH</td>
+      <td>On racial icons : blackness and the public imagination /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - SMITH</td>
+      <td>RHETORIC.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - SMITH</td>
+      <td>Logical fallacy monsters : an illustrated collection of logical fallacies /</td>
+      <td>First edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - SMITH</td>
+      <td>Pagans in the promised land : decoding the doctrine of Christian discovery /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - OMIDI</td>
+      <td>Libra</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - OMIDI</td>
+      <td>The year of magical thinking /</td>
+      <td>First edition.</td>
+    </tr>
+    <tr>
+      <td>ENGL 1C - OMIDI</td>
+      <td>Dr. Jekyll and Mr. Hyde /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ETHN 3B - STAFF</td>
+      <td>Race in America /</td>
+      <td>Second edition.</td>
+    </tr>
+    <tr>
+      <td>ETHN 3B - STAFF</td>
+      <td>Diversity and society : race, ethnicity, and gender /</td>
+      <td>Sixth edition.</td>
+    </tr>
+    <tr>
+      <td>ETHN 3B - CASTILLO</td>
+      <td>The new Jim Crow : mass incarceration in the age of colorblindness /</td>
+      <td>Revised edition.</td>
+    </tr>
+    <tr>
+      <td>ETHN 3B - CHAP</td>
+      <td>Race in America /</td>
+      <td>Second edition.</td>
+    </tr>
+    <tr>
+      <td>ETHN 3B - CERVANTES</td>
+      <td>Diversity and society : race, ethnicity, and gender /</td>
+      <td>Sixth edition.</td>
+    </tr>
+    <tr>
+      <td>GEOL 1 - STAFF</td>
+      <td>Laboratory manual for introductory geology /</td>
+      <td>Fourth edition.</td>
+    </tr>
+    <tr>
+      <td>GUID 1 - TENNEY/GILSTRAP</td>
+      <td>The career fitness program / Diane Sukiennik, Lisa Raufman.</td>
+      <td>11th</td>
+    </tr>
+    <tr>
+      <td>GUID 1 - TENNEY/GILSTRAP</td>
+      <td>The career fitness program / Diane Sukiennik, Lisa Raufman.</td>
+      <td>11th</td>
+    </tr>
+    <tr>
+      <td>GUID 1 - TENNEY/GILSTRAP</td>
+      <td>The career fitness program / Diane Sukiennik, Lisa Raufman.</td>
+      <td>11th</td>
+    </tr>
+    <tr>
+      <td>GUID 1 - TENNEY/GILSTRAP</td>
+      <td>The career fitness program / Diane Sukiennik, Lisa Raufman.</td>
+      <td>11th</td>
+    </tr>
+    <tr>
+      <td>GUID 27 - ARTEAGA</td>
+      <td>The student leadership challenge : five practices for becoming an exemplary leader /</td>
+      <td>Third edition</td>
+    </tr>
+    <tr>
+      <td>GUID 27 - ARTEAGA</td>
+      <td>The student leadership challenge : five practices for becoming an exemplary leader /</td>
+      <td>Third edition</td>
+    </tr>
+    <tr>
+      <td>HE 1 - DEQUIN</td>
+      <td>Health &amp; wellness /</td>
+      <td>Fourteenth edition.</td>
+    </tr>
+    <tr>
+      <td>HE 2 - DEQUIN</td>
+      <td>Human Sexuality Diversity in Contemporary Society</td>
+      <td>10th</td>
+    </tr>
+    <tr>
+      <td>HE 2 - YARBER</td>
+      <td>Human sexuality : diversity in contemporary society /</td>
+      <td>Eleventh edition.</td>
+    </tr>
+    <tr>
+      <td>HE 5 - DEQUIN</td>
+      <td>Introduction to public health /</td>
+      <td>Sixth edition.</td>
+    </tr>
+    <tr>
+      <td>HE 92 - DEQUIN</td>
+      <td>Comprehensive stress management /</td>
+      <td>Fifteenth edition.</td>
+    </tr>
+    <tr>
+      <td>HIST 1 - STAFF</td>
+      <td>A people's history of the United States : 1492-present /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>HIST 1 - STAFF</td>
+      <td>A people's history of the United States : 1492-present /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>HIST 12</td>
+      <td>Mexicanos : a history of Mexicans in the United States /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>HIST 2 - STAFF</td>
+      <td>Black Elk speaks : being the life story of a holy man of the Oglala Sioux /</td>
+      <td>21st-century ed.</td>
+    </tr>
+    <tr>
+      <td>HIST 2 - STAFF</td>
+      <td>Give me liberty ! : an American history / Eric, Foner.</td>
+      <td>4th ed.</td>
+    </tr>
+    <tr>
+      <td>HIST 2 - GONZA</td>
+      <td>Black Elk speaks : being the life story of a holy man of the Oglala Sioux /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>HIST 2 - GONZA</td>
+      <td>Reading the American past : selected historical documents /</td>
+      <td>5th ed.</td>
+    </tr>
+    <tr>
+      <td>HIST 4A - STAFF</td>
+      <td>Worlds together, worlds apart : from the beginnings of humankind to the present /</td>
+      <td>Concise third edition.</td>
+    </tr>
+    <tr>
+      <td>HIST 4B - STAFF</td>
+      <td>Ways of the World</td>
+      <td>3rd Edition</td>
+    </tr>
+    <tr>
+      <td>HIST 5 - STAFF</td>
+      <td>Early American women : a documentary history, 1600-1900 /</td>
+      <td>Third edition.</td>
+    </tr>
+    <tr>
+      <td>HIST 6 - GONZA</td>
+      <td>Modern American women : a documentary history /</td>
+      <td>2nd ed.</td>
+    </tr>
+    <tr>
+      <td>HIST 7B - STAFF</td>
+      <td>Western civilization : ideas, politics, and society /</td>
+      <td>Eleventh edition.</td>
+    </tr>
+    <tr>
+      <td>HUM 4 - LOZANO</td>
+      <td>Casino Royale /</td>
+      <td>2-disc widescreen edition.</td>
+    </tr>
+    <tr>
+      <td>HUM 4 - LOZANO</td>
+      <td>Gold diggers of 1933 /</td>
+      <td>Standard format.</td>
+    </tr>
+    <tr>
+      <td>HVAC 201/202/203/204 - MABIE</td>
+      <td>Refrigeration &amp; air conditioning technology / Bill Whitman, Bill ... [et al.].</td>
+      <td>7th ed.</td>
+    </tr>
+    <tr>
+      <td>HVAC 201/202/203/204 - MABIE</td>
+      <td>Refrigeration and air conditioning technology /</td>
+      <td>Seventh edition.</td>
+    </tr>
+    <tr>
+      <td>JOUR/SOC 10 - JANES</td>
+      <td>Media &amp; culture : mass communication in a digital age /</td>
+      <td>Twelfth edition.</td>
+    </tr>
+    <tr>
+      <td>JOUR/SOC 10 - STAFF</td>
+      <td>Media &amp; culture : mass communication in a digital age /</td>
+      <td>Thirteenth edition.</td>
+    </tr>
+    <tr>
+      <td>KIN 2 - LANGO</td>
+      <td>Introduction to kinesiology : studying physical activity /</td>
+      <td>Sixth edition.</td>
+    </tr>
+    <tr>
+      <td>KIN 8 - DEQUI</td>
+      <td>Foundations of sport and exercise psychology /</td>
+      <td>Eighth edition.</td>
+    </tr>
+    <tr>
+      <td>MATH 402 - STAFF</td>
+      <td>Prealgebra /</td>
+      <td>7th edition.</td>
+    </tr>
+    <tr>
+      <td>MATH 430 - STAFF</td>
+      <td>Beginning algebra /</td>
+      <td>12th edition.</td>
+    </tr>
+    <tr>
+      <td>MATH 5 - STAFF</td>
+      <td>Essentials of statistics /</td>
+      <td>5th edition.</td>
+    </tr>
+    <tr>
+      <td>MATH 6 - STAFF</td>
+      <td>Calculus for business, economics, life sciences, and social sciences /</td>
+      <td>Twelfth edition / Karl E. Byleen.</td>
+    </tr>
+    <tr>
+      <td>MUS 2 - STONE</td>
+      <td>Jazz styles : history and analysis /</td>
+      <td>Eleventh edition.</td>
+    </tr>
+    <tr>
+      <td>PHIL 1 - DELUNAS</td>
+      <td>Great philosophical arguments : an introduction to philosophy /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>PHIL 2 - STAFF</td>
+      <td>Critical thinking /</td>
+      <td>Eleventh edition.</td>
+    </tr>
+    <tr>
+      <td>PHIL 7A - STAFF</td>
+      <td>Sophie's world : a novel about the history of philosophy /</td>
+      <td>Paperback edition.</td>
+    </tr>
+    <tr>
+      <td>PHYS 1 - STAFF</td>
+      <td>Conceptual physics /</td>
+      <td>Twelfth edition.</td>
+    </tr>
+    <tr>
+      <td>POLS 1 - TURETZKY</td>
+      <td>Politics in America /</td>
+      <td>9th ed.</td>
+    </tr>
+    <tr>
+      <td>POLS 1 - BANKS</td>
+      <td>Approaching democracy /</td>
+      <td>8th ed.</td>
+    </tr>
+    <tr>
+      <td>POLS 4 - TURETZKY</td>
+      <td>Global politics /</td>
+      <td>10th ed.</td>
+    </tr>
+    <tr>
+      <td>POLS 5 - TURETZKY</td>
+      <td>Terrorism in the twenty-first century /</td>
+      <td>7th ed.</td>
+    </tr>
+    <tr>
+      <td>PSYC 10 - STAFF</td>
+      <td>Psychology : themes and variations /</td>
+      <td>Tenth edition.</td>
+    </tr>
+    <tr>
+      <td>PSYC 35 - STAFF</td>
+      <td>The social animal /</td>
+      <td>Twelfth edition.</td>
+    </tr>
+    <tr>
+      <td>PSYC 6 - STAFF</td>
+      <td>Getting to resolution : turning conflict into collaboration /</td>
+      <td>2nd ed.</td>
+    </tr>
+    <tr>
+      <td>PSYC 6 - HALPER</td>
+      <td>Getting to resolution : turning conflict into collaboration /</td>
+      <td>2nd ed.</td>
+    </tr>
+    <tr>
+      <td>PSYC 7 - BOSS</td>
+      <td>Anti-bias education for young children &amp; ourselves /</td>
+      <td>Second edition, revised &amp; updated.</td>
+    </tr>
+    <tr>
+      <td>SJS 5 - CASTI</td>
+      <td>Gendered voices, feminist visions : classic and contemporary readings /</td>
+      <td>Seventh edition.</td>
+    </tr>
+    <tr>
+      <td>SOC 1A - STAFF</td>
+      <td>You may ask yourself : an introduction to thinking like a sociologist /</td>
+      <td>Seventh edition.</td>
+    </tr>
+    <tr>
+      <td>SOC 1A - PARKS</td>
+      <td>You may ask yourself : an introduction to thinking like a sociologist /</td>
+      <td>Sixth edition.</td>
+    </tr>
+    <tr>
+      <td>SOC 1A - PARKS</td>
+      <td>You may ask yourself : an introduction to thinking like a sociologist /</td>
+      <td>Seventh edition.</td>
+    </tr>
+    <tr>
+      <td>SOC 1A - PARKS</td>
+      <td>You may ask yourself : an introduction to thinking like a sociologist /</td>
+      <td>Eighth editions.</td>
+    </tr>
+    <tr>
+      <td>SOC 21 - PARK</td>
+      <td>Families as they really are /</td>
+      <td>Third edition.</td>
+    </tr>
+    <tr>
+      <td>THEA 1 - HAEHL</td>
+      <td>The compact Bedford introduction to drama / compiled by Lee A. Jacobus.</td>
+      <td>7th ed.</td>
+    </tr>
+    <tr>
+      <td>THEA 3 - CRUZ</td>
+      <td>Luis Valdez--early works : Actos, Bernabé, and Pensamiento serpentino.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>THEA 3 - CRUZ</td>
+      <td>Mummified deer and other plays /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>THEA 4/CMUN 2 - MANTIA</td>
+      <td>Communicating Literature / Todd V. Lewis.</td>
+      <td>6th ed.</td>
+    </tr>
+    <tr>
+      <td>THEA 4A/4B - MANTIA</td>
+      <td>The actor at work /</td>
+      <td>10th ed.</td>
+    </tr>
+    <tr>
+      <td>WTRM 201 - MIDDLETON</td>
+      <td></td>
+      <td>2nd ed.</td>
+    </tr>
+    <tr>
+      <td>WTRM 201 - HALEY</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>WTRM 202 - STAFF</td>
+      <td></td>
+      <td>[Second edition].</td>
+    </tr>
+    <tr>
+      <td>WTRM 203 - STAFF</td>
+      <td>Fundamentals of industrial instrumentation and process control /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>WTRM 204 - STAFF</td>
+      <td>Pumps and hydraulics /</td>
+      <td>6th ed.</td>
+    </tr>
+    <tr>
+      <td>WTRM 204 - AMES</td>
+      <td>Pumping /</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>WTRM 205 - STAFF</td>
+      <td>Water distribution operator training handbook /</td>
+      <td>Fourth edition.</td>
+    </tr>
+    <tr>
+      <td>WTRM 207 - AMES</td>
+      <td>Operation of wastewater treatment plants /</td>
+      <td>Eighth edition.</td>
+    </tr>
+    <tr>
+      <td>WTRM 209 - AMES</td>
+      <td>Water treatment plant operation /</td>
+      <td>Seventh edition.</td>
+    </tr>
+
+
+
+</table>
+
+<script>
+function myFunction() {
+
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  
+  for (i = 0; i < tr.length; i++) {
+  
+    td = tr[i].getElementsByTagName("td")[0];    
+    td2 = tr[i].getElementsByTagName("td")[1];
+    
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+    
+    if (td2) {
+      txtValue = td2.textContent || td2.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+
+<!--
+updated function to filter both columns
+https://stackoverflow.com/questions/43622127/filtering-table-multiple-columns
+-->
+<script>
+  function myFunction() {
+      var input = document.getElementById("myInput");
+      var filter = input.value.toUpperCase();
+      var table = document.getElementById("myTable");
+      var tr = table.getElementsByTagName("tr");
+      for (var i = 0; i < tr.length; i++) {
+          if (tr[i].textContent.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+          } else {
+              tr[i].style.display = "none";
+          }      
+      }
+  }
+</script>
+
+</body>
+</html>
+
+
