@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
@@ -8,8 +9,6 @@
 }
 
 #myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 10px;
   background-repeat: no-repeat;
   width: 100%;
   font-size: 16px;
@@ -18,39 +17,125 @@
   margin-bottom: 12px;
 }
 
-#myTable {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 18px;
+#search-icon {
+  position: absolute;
+  left: 15px;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 30px; /* Adjust the size of the symbol */
+  color: #999; /* Color of the symbol */
+  font-family: 'Courier New', monospace; /* Command-line font style */
+  font-weight: bold;
 }
 
-#myTable th, #myTable td {
-  text-align: left;
-  padding: 12px;
+.search-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
 }
 
-#myTable tr {
-  border-bottom: 1px solid #ddd;
+.clear-button {
+    position: absolute;
+    right: 10px; /* Adjust spacing */
+    top: 42%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 35px; /* Slightly larger for better visibility */
+    color: #aaa; /* Softer color */
+    background: none;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    line-height: 1;
+    padding: 5px;
+    display: none; /* Hidden by default */
 }
 
-#myTable tr.header, #myTable tr:hover {
-  background-color: #f1f1f1;
+.clear-button:hover {
+    color: #555; /* Darker color on hover */
 }
+
+/* Table Styling */
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    position: sticky;
+    top: 0px;
+    background-color: #001F3F;
+    color: #ffffff;
+    text-align: left;
+    z-index: 99;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #001F3F;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #001F3F;
+}
+
+.title-container {
+    background-color: #001F3F; /* Navy blue */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.8em;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
 </style>
 </head>
 <body>
 
-<h2>Gavilan Course Reserves</h2>
+<div class="title-container">
+  <h2>Gavilan Course Reserves</h2>
+</div>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for course names.." title="Type in a name">
+<div class="search-container">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for course names or book titles... (e.g. ENGL 1A)" title="Type in a name">
 
-<table id="myTable">
-  <tr class="header">
-    <th style="width:30%;">Course</th>
-    <th style="width:50%;">Title</th>
-    <th style="width:20%;">Edition</th>
-  </tr>
+    <span id="search-icon">></span>
+
+    <button type="button" class="clear-button" onclick="clearSearch()">×</button>
+</div>
+
+
+<table id="myTable" class="styled-table">
+  <thead>
+    <tr class="header">
+      <th style="width:30%;">Course</th>
+      <th style="width:50%;">Title</th>
+      <th style="width:20%;">Edition</th>
+    </tr>
+  </thead>
+  <tbody>
  <tr>
       <td>_ACCT 20/21 - STAFF</td>
       <td>Managerial ACCT₂ /</td>
@@ -1287,66 +1372,41 @@
       <td>Seventh edition.</td>
     </tr>
 
-
-
+  </tbody>
 </table>
 
 <script>
 function myFunction() {
+    var input = document.getElementById("myInput");
+    var filter = input.value.toUpperCase();
+    var table = document.getElementById("myTable");
+    var tr = table.getElementsByTagName("tr");
 
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  
-  for (i = 0; i < tr.length; i++) {
-  
-    td = tr[i].getElementsByTagName("td")[0];    
-    td2 = tr[i].getElementsByTagName("td")[1];
-    
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
+    for (var i = 1; i < tr.length; i++) { // Skip header row
+        var td = tr[i].getElementsByTagName("td")[0];
+        var td2 = tr[i].getElementsByTagName("td")[1];
+        var txtValue1 = td ? td.textContent || td.innerText : "";
+        var txtValue2 = td2 ? td2.textContent || td2.innerText : "";
+
+        if (txtValue1.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+        } else {
+            tr[i].style.display = "none";
+        }
     }
-    
-    if (td2) {
-      txtValue = td2.textContent || td2.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
 }
 </script>
 
-<!--
-updated function to filter both columns
-https://stackoverflow.com/questions/43622127/filtering-table-multiple-columns
--->
 <script>
-  function myFunction() {
-      var input = document.getElementById("myInput");
-      var filter = input.value.toUpperCase();
-      var table = document.getElementById("myTable");
-      var tr = table.getElementsByTagName("tr");
-      for (var i = 0; i < tr.length; i++) {
-          if (tr[i].textContent.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-          } else {
-              tr[i].style.display = "none";
-          }      
-      }
+  function clearSearch() {
+      document.getElementById("myInput").value = "";
+      myFunction(); // Refresh the table filter
+      document.querySelector(".clear-button").style.display = "none"; // Hide button after clearing
   }
-</script>
 
+  document.getElementById("myInput").addEventListener("input", function() {
+      document.querySelector(".clear-button").style.display = this.value ? "block" : "none";
+  });
+</script>
 </body>
 </html>
-
-
